@@ -44,13 +44,13 @@ const BpmnDiagramView = (props) => {
     setIsBrowser(true);
   }, []);
 
-  // This effect runs only in the browser and only when we have content with a definition attribute
+  // This effect runs only in the browser and only when we have content with a file attribute
   useEffect(() => {
-    if (isBrowser && content?.definition?.download) {
+    if (isBrowser && content?.file?.download) {
       setLoading(true);
       setError(null);
       
-      fetch(content.definition.download)
+      fetch(content.file.download)
         .then(response => {
           if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
@@ -67,7 +67,7 @@ const BpmnDiagramView = (props) => {
           setLoading(false);
         });
     }
-  }, [isBrowser, content?.definition?.download]);
+  }, [isBrowser, content?.file?.download]);
 
   // Handle errors from the BpmnViewer component
   const handleViewerError = (errorMessage) => {

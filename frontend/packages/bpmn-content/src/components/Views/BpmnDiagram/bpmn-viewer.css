@@ -1,0 +1,9 @@
+/* BPMN Viewer customization */
+
+/* Hide the minimap toggle button */
+.djs-minimap .toggle {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}

@@ -1,0 +1,26 @@
+/* Styles for the BPMN diagram viewer */
+.bpmn-diagram-view .bpmn-diagram-container {
+  position: relative;
+}
+
+.bpmn-diagram-view .bpmn-canvas {
+  background-color: #fff;
+}
+
+/* Override some bpmn-js styles for better integration with our UI */
+.bpmn-diagram-view .djs-palette {
+  background-color: #f8f8f8;
+  border-color: #ddd;
+}
+
+.bpmn-diagram-view .djs-overlay-context-pad {
+  width: auto;
+  height: auto;
+}
+
+/* Make sure the canvas is responsive */
+@media (max-width: 768px) {
+  .bpmn-diagram-view .bpmn-canvas {
+    height: 400px !important;
+  }
+}
